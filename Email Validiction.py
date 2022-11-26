@@ -1,3 +1,6 @@
+# this email validation help you to check the email is valid or not
+# if the email is valid then it will return true else it will return false
+
 email = input('Enter your email : ')
 num, num1, num2 = 0, 0, 0
 
