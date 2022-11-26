@@ -1,5 +1,12 @@
-# this email validation help you to check the email is valid or not
-# if the email is valid then it will return true else it will return false
+# You can't get the output with 6 characters. 1st condition
+# You can't get the output if your email has the first character is a number. 2nd condition
+# You can't get the output if your email does not have -4 or -3 is a dot(.) 3rd condition
+# You can't get the output if your email has more than one dot(.) from -9 (Index) to end of string. 4th condition
+# You can't get the output if your email has more than one @ character. 5th condition
+# You can't get the output if your email has a space. 6th condition
+# You can't get the output if your email has a capital letter. 7th condition
+# you can't get the output if your email has any special character. 8th condition
+
 
 email = input('Enter your email : ')
 num, num1, num2 = 0, 0, 0
