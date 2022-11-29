@@ -16,7 +16,7 @@ if len(email) >= 6:     # 1st condition for email length is greater than 6 or no
         if ('@' in email) and (email.count('@') == 1) and email[-9:].count('.') == 1:  # 3rd condition give you error if email have more than one @
             if (email[-4] == '.') ^ (email[-3] == '.') :  # 4th condition give you error if email have more than one .
                 for loop in email:
-                    if loop == loop.isspace():  # 5th condition give you error if email have space
+                    if loop.isspace():  # 5th condition give you error if email have space
                         num = 1
                     elif loop.isalpha():
                         if loop == loop.upper():    # 5th condition give you error if email have uppercase letter
@@ -27,15 +27,19 @@ if len(email) >= 6:     # 1st condition for email length is greater than 6 or no
                         continue
                     else:
                         num2 = 1
-                if num == 1 or num1 == 1 or num2 == 1:
-                    print('Invalid Email. 5')
+                if num == 1:
+                    print('You entered an invalid email because you have space in your email.')
+                elif num1 == 1:
+                    print('You entered an invalid email because you have uppercase letter in your email.')
+                elif num2 == 1:
+                    print('You entered an invalid email because you have special character in your email.')
                 else:
-                    print('Congratulation! You entered a right email.') #
+                    print('Congratulation! You entered a right email.')
             else:
-                print('Invalid Email. 4') # 4th condition give you error if email have more than one .
+                print('You entered a invalid email because you don\'t have write position of dot(.).') # 4th condition give you error if email have more than one .
         else:
-            print('Invalid Email. 3') # 3rd condition give you error if email have more than one @
+            print('You entered a invalid email because you have more than one @ or entered a two dot (.) in in list 9 letters. .') # 3rd condition give you error if email have more than one @
     else:
-        print('Invalid Email. 2') # 2nd condition give you error if email start with number
+        print('You entered a invalid email because you have number in your email in the first character.') # 2nd condition give you error if email start with number
 else:
-    print('Invalid Email. 1') # 1st condition give you error if email length is less than 6
+    print('You entered an invalid email because you have less than 6 character in your email. ') # 1st condition give you error if email length is less than 6
